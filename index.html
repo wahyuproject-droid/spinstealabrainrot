@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Neon Spin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SECRET ADMIN -->
+<div id="adminSecret" onclick="openAdminLogin()"></div>
+
+<!-- HOME -->
+<section id="home">
+  <h1>spin steal a brainrot</h1>
+  <p class="sub">dapet zonk buy lagi</p>
+
+  <button onclick="goLogin()">Mulai Spin</button>
+
+  <button class="wa-btn" onclick="chatWA()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    WhatsApp Admin
+  </button>
+</section>
+
+<!-- LOGIN MEMBER -->
+<section id="login" class="hide">
+  <h2>Login Member</h2>
+  <input id="loginUser" placeholder="Username">
+  <input id="loginPass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button class="ghost" onclick="goHome()">Kembali</button>
+</section>
+
+<!-- SPIN -->
+<section id="spin" class="hide">
+  <h2>gas spin</h2>
+  <p id="coinText" class="coin">Coin: 0</p>
+
+  <div class="slot-machine">
+    <div class="reel" id="reel">---</div>
+    <div class="shine"></div>
+  </div>
+
+  <button onclick="spin()">SPIN (10 COIN)</button>
+  <button class="ghost" onclick="logout()">Logout</button>
+</section>
+
+<!-- ADMIN LOGIN -->
+<section id="adminLogin" class="hide">
+  <h2>Admin Login</h2>
+  <input id="adminUser" placeholder="Admin User">
+  <input id="adminPass" type="password" placeholder="Password">
+  <button onclick="adminLogin()">Login</button>
+  <button class="ghost" onclick="goHome()">Batal</button>
+</section>
+
+<!-- ADMIN PANEL -->
+<section id="admin" class="hide">
+  <h2>🛠 ADMIN PANEL</h2>
+
+  <div class="admin-box">
+    <h3>Buat Akun</h3>
+    <input id="newUser" placeholder="Username">
+    <input id="newPass" placeholder="Password">
+    <button onclick="createUser()">Create</button>
+  </div>
+
+  <div class="admin-box">
+    <h3>Set Coin</h3>
+    <input id="coinUser" placeholder="Username">
+    <input id="coinAmount" type="number" placeholder="Jumlah Coin">
+    <button onclick="addCoin()">Set</button>
+  </div>
+
+  <div class="admin-box">
+    <h3>📊 Monitor Member</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Coin</th>
+          <th>Spin</th>
+          <th>Reward</th>
+        </tr>
+      </thead>
+      <tbody id="monitorTable"></tbody>
+    </table>
+  </div>
+
+  <button class="ghost" onclick="adminLogout()">⬅ Beranda</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
